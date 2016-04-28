@@ -8,11 +8,11 @@
             {{product.name}} : ${{product.price}}  <button ng-click="addToCart(product)">Add To Cart</button>
         </div>
     </div>
-    
+
     <div class="f1">
-        <strong>Cart</strong>:<br><br>
+        <strong>Cart</strong>:{{getTotal()}}<br><br>
         <div ng-repeat="item in user.cart.products">
-            {{item.product.name}} : ${{item.product.price}} <button ng-click="removeFromCart(item.product)">Remove</button>
+            {{item.product.name}} : ${{item.product.price}}, qty: {{item.qty}} <button ng-click="removeFromCart(item.product)">Remove</button>
         </div>
     </div>
 </div>

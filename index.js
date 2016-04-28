@@ -38,7 +38,7 @@ app.get('/api/user/:id', userCtrl.ReadId);
 
 
 
-mongoose.connect('mongodb://localhost:27017/funstuff');
+mongoose.connect('mongodb://localhost/funstuff');
 mongoose.connection.once('open', function(){
     console.log('Connected to mongodb\n');
 });
